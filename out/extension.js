@@ -21,7 +21,11 @@ function activate(context) {
 }
 exports.activate = activate;
 const hwContent = {
-    htmlContent: () => {
+    randomNonce: (max) => {
+        return Math.floor(Math.random() * Math.floor(max));
+    },
+    htmlContent() {
+        let nonce = this.randomNonce(9999999);
         return `
         <!doctype html>
         <html>
@@ -43,7 +47,7 @@ const hwContent = {
                 </style>
             </head>
             <body>
-                <iframe seamless="seamless" src="http://localhost:4567"></iframe>
+                <iframe seamless="seamless" src="http://localhost:4567?nonce=${nonce}"></iframe>
             </body>
         </html>`;
     },

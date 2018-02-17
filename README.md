@@ -1,6 +1,7 @@
-# vscode-hello-world README
+# vscode-hello-world
 
-Proof of concept extension to show how one can have their extension render HTML via a locally running server.
+Proof of concept extension to show how one can have their extension render HTML via a locally running server, complete
+with dynamically updating content.
 
 ## Building
 

@@ -1,5 +1,17 @@
 <html>
     <body>
-        hello world
+        <h4>hello world</h4>
+        <p id="content"></p>
     </body>
+
+    <script>
+        window.setInterval(
+            function () {
+                let date = new Date();
+                let time = date.toString()
+                document.querySelector("p#content").innerText = time;
+            },
+            1000
+        );
+    </script>
 </html>
